@@ -26,11 +26,6 @@ return {
     -- opts will be merged with the parent spec
     opts = { use_diagnostic_signs = true },
   },
-  {
-    --disable mini.pais
-    "echasnovski/mini.pairs",
-    enable = false,
-  },
   -- disable trouble
   { "folke/trouble.nvim", enabled = false },
 
@@ -94,8 +89,8 @@ return {
     opts = {
       ---@type lspconfig.options
       servers = {
-        -- pyright will be automatically installed with mason and loaded with lspconfig
-        pyright = {},
+        arduino_language_server = { languages = { "cpp", "h" } },
+        codespell = { languages = { "md" } },
       },
     },
   },
@@ -149,6 +144,7 @@ return {
         "javascript",
         "json",
         "lua",
+        "cpp",
         "markdown",
         "markdown_inline",
         "python",
@@ -207,10 +203,16 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "arduino_language_server",
         "stylua",
         "shellcheck",
         "shfmt",
         "flake8",
+        "clangd",
+      },
+
+      servers = {
+        arduino_language_server = { languages = { "cpp", "h" } },
       },
     },
   },
@@ -265,5 +267,10 @@ return {
         end, { "i", "s" }),
       })
     end,
+  },
+  {
+    --disable mini.pairs
+    "echasnovski/mini.pairs",
+    enable = false,
   },
 }
