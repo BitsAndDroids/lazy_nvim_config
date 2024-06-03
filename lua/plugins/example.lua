@@ -114,6 +114,7 @@ return {
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
         tsserver = {},
+        rust_analyzer = {},
       },
       -- you can do any additional lsp server setup here
       -- return true if you don't want this server to be setup with lspconfig
@@ -122,6 +123,10 @@ return {
         -- example to setup with typescript.nvim
         tsserver = function(_, opts)
           require("typescript").setup({ server = opts })
+          return true
+        end,
+        rust_analyzer = function(_, opts)
+          require("rust-tools").setup({ server = opts })
           return true
         end,
         -- Specify * to use this function as a fallback for any server
