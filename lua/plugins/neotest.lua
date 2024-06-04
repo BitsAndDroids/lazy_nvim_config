@@ -1,16 +1,23 @@
 return {
-  { "nvim-neotest/neotest-jest" },
-  { "rouge8/neotest-rust" },
   {
     "nvim-neotest/neotest",
-    opts = {
-      adapters = {
-        ["neotest-jest"] = {
-          jestCommand = "npm test --",
-          env = { CI = true },
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-jest")({
+            jestCommand = "npm test --",
+            env = { CI = true },
+            cwd = function(path)
+              return vim.fn.getcwd()
+            end,
+          }),
         },
-        ["neotest-rust"] = {},
-      },
-    },
+      })
+    end,
+    event = "BufRead",
+  },
+  {
+    "nvim-neotest/neotest-jest",
+    after = "nvim-neotest/neotest",
   },
 }
