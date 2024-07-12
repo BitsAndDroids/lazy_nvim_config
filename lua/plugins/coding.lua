@@ -1,6 +1,7 @@
 local js_based_languages = { "javascript", "typescript", "typescriptreact", "javascriptreact" }
 
 return {
+
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
@@ -8,6 +9,17 @@ return {
     config = function()
       require("copilot").setup({})
     end,
+  },
+  {
+    "hedyhli/outline.nvim",
+    lazy = true,
+    cmd = { "Outline", "OutlineOpen" },
+    keys = { -- Example mapping to toggle outline
+      { "<leader>o", "<cmd>Outline<CR>", desc = "Toggle outline" },
+    },
+    opts = {
+      -- Your setup opts here
+    },
   },
   {
     "LintaoAmons/scratch.nvim",

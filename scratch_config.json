@@ -28,7 +28,7 @@
     "k8s.yaml": { "subdir": "learn-k8s" }
   },
   "use_telescope": true,
-  "filetypes": ["ts", "xml", "go", "lua", "js", "py", "sh"],
+  "filetypes": ["xml", "go", "lua", "js", "py", "sh", "ts"],
   "localKeys": [
     {
       "filenameContains": ["gp"],
@@ -41,7 +41,7 @@
       ]
     }
   ],
-  "scratch_file_dir": "C:\\Users\\dave-\\AppData\\Local\\Temp\\nvim\\scratch.nvim",
+  "scratch_file_dir": "/home/bitsanddroids/.cache/nvim/scratch.nvim",
   "window_cmd": "edit"
 }
 
