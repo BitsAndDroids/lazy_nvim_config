@@ -1,5 +1,8 @@
 {
   "filetype_details": {
+    "md": {
+      "subdir": "md notes"
+    },
     "go": {
       "filename": "main",
       "cursor": { "location": [4, 2], "insert_mode": true },
@@ -28,7 +31,7 @@
     "k8s.yaml": { "subdir": "learn-k8s" }
   },
   "use_telescope": true,
-  "filetypes": ["xml", "go", "lua", "js", "py", "sh", "ts"],
+  "filetypes": ["md", "ts", "xml", "go", "lua", "js", "py", "sh"],
   "localKeys": [
     {
       "filenameContains": ["gp"],
@@ -41,7 +44,6 @@
       ]
     }
   ],
-  "scratch_file_dir": "/home/bitsanddroids/.cache/nvim/scratch.nvim",
+  "scratch_file_dir": "/home/dave/scratch",
   "window_cmd": "edit"
 }
-
