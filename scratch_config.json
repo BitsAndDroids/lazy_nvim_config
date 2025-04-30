@@ -31,7 +31,7 @@
     "k8s.yaml": { "subdir": "learn-k8s" }
   },
   "use_telescope": true,
-  "filetypes": ["md", "ts", "xml", "go", "lua", "js", "py", "sh"],
+  "filetypes": ["xml", "go", "lua", "js", "py", "sh", "ts", "md"],
   "localKeys": [
     {
       "filenameContains": ["gp"],

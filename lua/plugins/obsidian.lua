@@ -35,23 +35,5 @@ return {
 
   new_notes_location = "notes_subdir",
 
-  opts = {
-    workspaces = {
-      {
-        name = "alliandervault",
-        path = "~/repos/alliander/alliander_vault/",
-        overrides = {
-          notes_subdir = "notes",
-        },
-      },
-    },
-
     -- see below for full list of options 👇
-  },
-
-  daily_notes = {
-    folder = "notes/dailies",
-    date_format = "%d-%m-%Y",
-    default_tags = { "daily_notes" },
-  },
 }
