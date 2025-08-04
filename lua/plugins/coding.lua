@@ -1,15 +1,6 @@
 local js_based_languages = { "javascript", "typescript", "typescriptreact", "javascriptreact" }
 
 return {
-
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup({})
-    end,
-  },
   {
     "hedyhli/outline.nvim",
     lazy = true,
@@ -101,6 +92,13 @@ return {
           require("dap").step_out()
         end,
         desc = "Step Out",
+      },
+      {
+        "<leader>do",
+        function()
+          require("dap").step_over()
+        end,
+        desc = "Step over",
       },
     },
   },
